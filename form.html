@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mic Drop > Request Artist</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="glass-card">
+      <main>
+        <form id="requestForm" action="https://httpbin.org/post" method="post">
+          <div id="requestFormFields">
+            <h1 style="font-size: 40px; text-align: center">Request an Artist</h1>
+
+            <div class="input-group" style="padding-top: 30px; text-align: left">
+              <label for="name">Artist's Name <span>*</span></label>
+              <input id="name" type="text" name="name" class="input-right" required />
+              <div class="error-message" id="nameError"></div>
+            </div>
+
+            <div class="input-group" style="padding-top: 10px; text-align: left">
+              <label for="genre">Music Genre <span>*</span></label>
+              <input
+                id="genre"
+                type="text"
+                list="genreOpt"
+                name="genre"
+                class="input-left"
+                required
+              />
+              <datalist id="genreOpt">
+                <option value="Indie"></option>
+                <option value="Rock"></option>
+                <option value="Metal"></option>
+                <option value="Emo"></option>
+                <option value="Metal"></option>
+                <option value="Pop"></option>
+                <option value="Alternative"></option>
+                <option value="Classical"></option>
+                <option value="Hip-hop"></option>
+                <option value="Jazz"></option>
+                <option value="R&B"></option>
+                <option value="Dance"></option>
+                <option value="Folk"></option>
+              </datalist>
+              <div class="error-message" id="genreError"></div>
+            </div>
+
+            <div class="input-group" style="padding-top: 10px; text-align: left">
+              <label for="social-media-urls">Social Media URLs (separated by commas):</label>
+              <input
+                type="text"
+                id="social-media-urls"
+                name="social-media-urls"
+                placeholder="Enter URLs"
+              />
+              <div class="error-message" id="socialMediaError"></div>
+            </div>
+
+            <div class="input-group" style="text-align: left">
+              <label>Songs & Videos <span>*</span></label>
+              <div id="songsVids">
+                <div class="input-container">
+                  <input type="text" name="songsVids[]" placeholder="Enter URL" required />
+                  <span class="remove-btn" style="display: none">-</span>
+                </div>
+              </div>
+              <button type="button" id="songsVidsAdd" style="background-color: #2e2d2d">+</button>
+              <div class="error-message" id="songsVidsError"></div>
+            </div>
+
+            <div class="inline-label-input">
+              <label style="color: grey">Explicit Lyrics</label>
+              <input type="checkbox" name="explicit" value="1" />
+            </div>
+
+            <div class="input-group" style="padding-top: 10px; text-align: left">
+              <label class="topLabel">Why this artist should be added <span>*</span></label>
+              <textarea name="reason" dir="ltr" wrap="SOFT" required></textarea>
+            </div>
+
+            <div style="padding: 30px">
+              <input type="submit" value="Submit Request" name="requestBtn" formtarget="_blank" />
+            </div>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <script src="js/valid.js"></script>
+  </body>
+</html>

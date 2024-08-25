@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mic Drop</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <h1>Mic Drop</h1>
+
+    <p style="text-align: center">where every beat drops a story</p>
+
+    <div class="glass-card">
+      <nav id="menu" style="padding-top: 25px">
+        <!-- Dynamically create your menu category buttons here -->
+      </nav>
+      <img
+        id="artist-image"
+        src="images/acc.png"
+        alt="Artist Image"
+        style="width: 80px; height: 80px; vertical-align: middle; border-radius: 50%"
+      />
+
+      <h2 id="selected-artist" style="display: inline; color: grey">
+        <!-- Dynamically update the selected category title -->
+      </h2>
+      <a id="selected-links" style="display: inline; color: pink">
+        <!-- Dynamically allocate links -->
+      </a>
+
+      <div class="card-grid">
+        <!-- Example cards, you can dynamically generate these as needed -->
+      </div>
+    </div>
+
+    <script src="./js/artists.js"></script>
+    <script src="./js/songs.js"></script>
+    <script src="./js/app.js"></script>
+
+    <footer>
+      <div class="footer">
+        <h3 style="font-size: 40px; color: rgb(87, 87, 87)">Newsletter!</h3>
+        <p style="color: rgb(87, 87, 87)">Subscribe to get the latest updates on new artists</p>
+        <form id="signUp" action="https://httpbin.org/post" method="post">
+          <div id="signUpInputs">
+            <input id="email" type="email" placeholder="example@email.com" name="email" required />
+            <input type="submit" value="Sign Up" name="emailBtn" formtarget="_blank" />
+          </div>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>
