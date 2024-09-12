@@ -1,2 +1,2 @@
-# Music-Library-App-BETA-
+# Music-Library-App
 A attempt to clone Spotify 
